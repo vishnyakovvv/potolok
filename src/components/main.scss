@@ -1,0 +1,164 @@
+@import "./vars";
+@import "./colors";
+@import "./mixins";
+
+* {
+  //   outline: 1px solid red;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Gotham Pro", sans-serif;
+  margin: 0;
+}
+
+img {
+  line-height: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  padding: 0;
+  background: 0 0;
+}
+
+input {
+  outline: none;
+}
+
+input::placeholder {
+  color: $c_black-3;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 23px;
+  opacity: 0.6;
+
+  @include media_interval(0, $media_mobile) {
+    text-align: center;
+  }
+}
+
+.container {
+  min-height: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 110px;
+
+  @include media_interval($media_tablet, $media_laptop-big) {
+    padding: 0 60px;
+  }
+
+  @include media_interval($media_mobile, $media_tablet) {
+    padding: 0 40px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    padding: 0 10px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.title-block {
+  margin: 0 0 20px;
+
+  &_one {
+    font-size: calc(26px + 22 * (100vw / 1440));
+    font-weight: 500;
+    color: $c_black;
+    margin: 0;
+
+    @include media_interval(0, $media_mobile) {
+      font-size: calc(26px + (22 + 22 * 0.7) * ((100vw - 320px) / 1440));
+    }
+  }
+
+  &_two {
+    font-size: 36px;
+    // font-size: calc(26px + 22 * (100vw / 1440));
+    font-weight: 400;
+    color: $c_black-3;
+    margin: 0;
+
+    @include media_interval($media_laptop, $media_laptop-big) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include media_interval($media_tablet, $media_laptop) {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include media_interval(0, $media_tablet) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.main-poster {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  z-index: -1;
+  width: 700px;
+}
+
+.button-main {
+  background-color: $c_yellow;
+  border-radius: 25px;
+  box-shadow: 0px 0px 7px 2px rgba(170, 167, 155, 0.5);
+  padding: 20px 44px;
+  color: $c_white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 15px;
+
+  &:active {
+    transform: scale(0.99);
+    box-shadow: none;
+  }
+}
+
+.yellow-bold {
+  font-weight: 700;
+  color: $c_yellow;
+}

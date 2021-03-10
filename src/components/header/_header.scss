@@ -1,24 +1,79 @@
-header {
-  background-color: #89f7fe;
-  height: 80px;
-  display: flex;
-  align-items: center;
+@import "./vars";
+@import "../colors";
+@import "./mixins";
 
-  span {
-    padding-right: 20px;
+.header {
+  padding: 55px 0 68px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
-  a {
-    color: #000;
-    text-decoration: none;
+  &__logo {
+    margin-right: 155px;
+    width: 250px;
+  }
 
-    &:not(:last-child) {
-      margin-right: 20px;
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__phone {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: $c_black;
+  }
+
+  &__city {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &__menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 55px;
+    height: 33px;
+    cursor: pointer;
+  }
+  &__stick,
+  &__stick::before,
+  &__stick::after {
+    width: 55px;
+    height: 5px;
+    border-radius: 5px;
+    background: $c_gray--dark;
+    top: 50%;
+    position: absolute;
+    transition: all 0.6s;
+  }
+  &__stick::before {
+    content: "";
+    top: -12px;
+    left: 0;
+  }
+  &__stick::after {
+    content: "";
+    top: 12px;
+    left: 0;
+  }
+  &__stick.open {
+    transform: translateX(-50px);
+    background: transparent;
+    &::after {
+      transform: rotate(-45deg) translate(50px, 33px);
     }
-    &:hover {
-      border-bottom: 1px solid #000;
+    &::before {
+      transform: rotate(45deg) translate(50px, -33px);
     }
   }
 }
-
-

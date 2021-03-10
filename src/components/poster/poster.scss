@@ -1,0 +1,63 @@
+@import "./vars";
+@import "./colors";
+@import "./mixins";
+
+.poster {
+  padding: 30px 0 120px;
+  position: relative;
+
+  &::before {
+    background: url(/static/images/hammer.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    @include media_interval(0, $media_tablet) {
+      background: none;
+    }
+  }
+
+  &__wrapper {
+    max-width: 570px;
+  }
+
+  &__title {
+    margin-bottom: 52px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    color: $c_gray--light-2;
+    max-width: 465px;
+    margin-bottom: 41px;
+  }
+
+  &__offer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 110px;
+
+    &-img {
+      width: 105px;
+      height: 105px;
+      margin-bottom: 7px;
+    }
+
+    &-text {
+      width: 125px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 16px;
+    }
+  }
+}

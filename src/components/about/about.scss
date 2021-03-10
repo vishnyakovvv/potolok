@@ -1,0 +1,84 @@
+@import "../vars";
+@import "../colors";
+@import "../mixins";
+
+.about {
+  padding: 113px 0;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  &::before {
+    background: url(/static/images/diary.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    @include media_interval(0, $media_tablet) {
+      background: none;
+    }
+  }
+
+  &__wrapper {
+    margin-left: 505px;
+  }
+
+  &__poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__strings {
+    position: absolute;
+    left: 160px;
+    opacity: 0.6;
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px;
+
+    &-inner {
+      width: 320px;
+      position: relative;
+      margin-bottom: 36px;
+
+      &:nth-child(even) {
+        margin-right: 18px;
+      }
+    }
+
+    &-svg {
+      position: absolute;
+      top: 2px;
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin: 0 0 15px 20px;
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      color: $c_gray--light-2;
+    }
+  }
+
+  &__title {
+    margin-bottom: 39px;
+  }
+}
