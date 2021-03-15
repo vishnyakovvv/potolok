@@ -82,6 +82,13 @@ input::placeholder {
   }
 }
 
+.container-big {
+  min-height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
