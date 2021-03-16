@@ -46,7 +46,7 @@
       align-self: center;
       width: 161px;
       height: 43px;
-      transition: $tr_duration $tr_easing;
+      transition: all $tr_duration $tr_easing;
       background-image: none;
       margin: 0 4px;
 
@@ -55,7 +55,7 @@
         color: $c_black-3;
         width: 161px;
         height: 43px;
-        background-image: url(/static/images/yellow_spot.png);
+        background-image: url(/static/images/grey_spot.png);
         background-repeat: no-repeat;
       }
 
