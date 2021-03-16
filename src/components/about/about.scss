@@ -3,10 +3,14 @@
 @import "../mixins";
 
 .about {
-  padding: 113px 0;
+  padding: 147px 0;
   display: flex;
   align-items: flex-start;
   position: relative;
+
+  @include media_interval($media_laptop, $media_laptop-big) {
+   padding: 70px 0;
+    }
 
   &::before {
     background: url(/static/images/diary.png);
@@ -27,32 +31,55 @@
 
   &__wrapper {
     margin-left: 505px;
+
+    @include media_interval($media_tablet, $media_laptop) {
+      margin-left: 440px;
+              }
   }
 
   &__poster {
     position: absolute;
     top: 0;
     left: 0;
+
+    @include media_interval($media_laptop, $media_laptop-big) {
+      width: 530px;
+      }
+
+    @include media_interval($media_tablet, $media_laptop) {
+width: 470px;
+        }
   }
 
   &__strings {
     position: absolute;
     left: 160px;
     opacity: 0.6;
+
+    @include media_interval($media_laptop, $media_laptop-big) {
+left: 60px;
+      }
   }
 
   &__box {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 70px;
 
     &-inner {
       width: 320px;
       position: relative;
       margin-bottom: 36px;
 
+      @include media_interval($media_laptop, $media_laptop-big) {
+width: 280px;
+      }
+
       &:nth-child(even) {
         margin-right: 18px;
+
+        @include media_interval($media_laptop, $media_laptop-big) {
+margin-right: 10px;
+                }
       }
     }
 
@@ -67,6 +94,12 @@
       font-size: 22px;
       letter-spacing: 1px;
       margin: 0 0 15px 20px;
+
+      @include media_interval($media_laptop, $media_laptop-big) {
+        font-size: 21px;
+    letter-spacing: 0px;
+    margin: 0 0 10px 20px;
+              }
     }
 
     &-text {
@@ -75,6 +108,11 @@
       font-size: 16px;
       line-height: 18px;
       color: $c_gray--light-2;
+
+      @include media_interval($media_laptop, $media_laptop-big) {
+        font-size: 14px;
+        line-height: 16px;
+              }
     }
   }
 
