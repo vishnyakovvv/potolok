@@ -46,6 +46,10 @@
     justify-content: space-between;
     margin-top: 110px;
 
+    @include media_interval(0, $media_tablet) {
+      display: none;
+    }
+
     &-img {
       width: 105px;
       height: 105px;

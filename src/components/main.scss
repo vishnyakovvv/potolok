@@ -148,14 +148,24 @@ h3 {
   width: 700px;
 
   @include media_interval($media_laptop, $media_laptop-big) {
-width: 600px;
-top: 0;
+    width: 600px;
+    top: 0;
   }
 
   @include media_interval($media_tablet, $media_laptop) {
     width: 470px;
     top: 0;
-      }
+  }
+
+  @include media_interval($media_mobile, $media_tablet) {
+    opacity: .2;
+    width: 450px;
+    top: 0;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    display: none;
+  }
 }
 
 .button-main {
