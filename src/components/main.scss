@@ -100,13 +100,14 @@ input::placeholder {
   margin: 0 0 20px;
 
   &_one {
-    font-size: calc(26px + 22 * (100vw / 1440));
+    font-size: calc(30px + 18 * ((100vw - 320px) / (1440 - 320)));
     font-weight: 500;
     color: $c_black;
     margin: 0;
 
     @include media_interval(0, $media_mobile) {
-      font-size: calc(26px + (22 + 22 * 0.7) * ((100vw - 320px) / 1440));
+      width: 310px;
+      margin: 0 auto;
     }
   }
 
@@ -158,7 +159,7 @@ h3 {
   }
 
   @include media_interval($media_mobile, $media_tablet) {
-    opacity: .2;
+    opacity: 0.2;
     width: 450px;
     top: 0;
   }

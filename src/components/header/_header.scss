@@ -6,8 +6,8 @@
   padding: 55px 0 68px;
 
   @include media_interval(0, $media_mobile) {
-padding: 30px 0;
-   }
+    padding: 30px 0;
+  }
 
   &__wrapper {
     position: relative;
@@ -16,7 +16,8 @@ padding: 30px 0;
 
     @include media_interval(0, $media_mobile) {
       flex-direction: column;
-     }
+      align-items: unset;
+    }
   }
 
   &__logo {
@@ -24,22 +25,23 @@ padding: 30px 0;
     width: 250px;
 
     @include media_interval($media_laptop, $media_laptop-big) {
-    margin-right: 90px;
+      margin-right: 90px;
     }
 
     @include media_interval($media_tablet, $media_laptop) {
-    margin-right: 90px;
-    width: 200px;
+      margin-right: 90px;
+      width: 200px;
     }
 
     @include media_interval($media_mobile, $media_tablet) {
-     margin-right: 70px;
+      margin-right: 70px;
     }
 
     @include media_interval(0, $media_mobile) {
       margin-right: 0;
-      margin-bottom: 45px;
-     }
+      margin-bottom: 20px;
+      width: 170px;
+    }
   }
 
   &__contacts {
@@ -48,8 +50,8 @@ padding: 30px 0;
     align-items: flex-end;
 
     @include media_interval(0, $media_mobile) {
-align-items: center;
-      }
+      align-items: center;
+    }
   }
 
   &__phone {
@@ -61,7 +63,12 @@ align-items: center;
 
     @include media_interval($media_tablet, $media_laptop) {
       font-size: 26px;
-      }
+    }
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 24px;
+      line-height: unset;
+    }
   }
 
   &__city {
@@ -72,7 +79,12 @@ align-items: center;
 
     @include media_interval($media_tablet, $media_laptop) {
       font-size: 22px;
-      }
+    }
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 20px;
+      line-height: unset;
+    }
   }
 
   &__menu {
@@ -82,17 +94,16 @@ align-items: center;
     width: 55px;
     height: 33px;
     cursor: pointer;
-    opacity: .5;
-    transition:$tr_duration $tr_easing ;
+    opacity: 0.5;
+    transition: $tr_duration $tr_easing;
 
     @include media_interval(0, $media_mobile) {
-top: 70px;
-         }
+      top: 10px;
+    }
 
     &:hover {
       opacity: 1;
     }
-
   }
 
   &__stick,

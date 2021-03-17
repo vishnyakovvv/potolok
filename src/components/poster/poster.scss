@@ -25,10 +25,14 @@
 
   &__wrapper {
     max-width: 600px;
+
+    @include media_interval(0, $media_mobile) {
+      text-align: center;
+    }
   }
 
   &__title {
-    margin-bottom: 52px;
+    margin-bottom: 30px;
   }
 
   &__text {
@@ -39,6 +43,11 @@
     color: $c_gray--light-2;
     max-width: 465px;
     margin-bottom: 41px;
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 20px;
+      line-height: unset;
+    }
   }
 
   &__offer {
@@ -46,7 +55,11 @@
     justify-content: space-between;
     margin-top: 110px;
 
-    @include media_interval(0, $media_tablet) {
+    @include media_interval($media_mobile, $media_laptop) {
+      margin-top: 40px;
+    }
+
+    @include media_interval(0, $media_mobile) {
       display: none;
     }
 
