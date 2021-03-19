@@ -9,7 +9,11 @@
   position: relative;
 
   @include media_interval($media_laptop, $media_laptop-big) {
-   padding: 70px 0;
+   padding: 120px 0;
+    }
+
+    @include media_interval($media_tablet, $media_laptop) {
+padding: 50px 0;
     }
 
   &::before {
@@ -33,7 +37,7 @@
     margin-left: 505px;
 
     @include media_interval($media_tablet, $media_laptop) {
-      margin-left: 440px;
+      margin-left: 370px;
               }
   }
 
@@ -47,7 +51,7 @@
       }
 
     @include media_interval($media_tablet, $media_laptop) {
-width: 470px;
+width: 400px;
         }
   }
 
@@ -56,8 +60,9 @@ width: 470px;
     left: 160px;
     opacity: 0.6;
 
-    @include media_interval($media_laptop, $media_laptop-big) {
-left: 60px;
+    @include media_interval($media_tablet, $media_laptop-big) {
+      left: 0;
+      max-width: 460px;
       }
   }
 
@@ -72,6 +77,10 @@ left: 60px;
 
       @include media_interval($media_laptop, $media_laptop-big) {
 width: 280px;
+      }
+
+      @include media_interval($media_tablet, $media_laptop) {
+width: 250px;
       }
 
       &:nth-child(even) {
@@ -97,9 +106,14 @@ margin-right: 10px;
 
       @include media_interval($media_laptop, $media_laptop-big) {
         font-size: 21px;
-    letter-spacing: 0px;
-    margin: 0 0 10px 20px;
-              }
+        letter-spacing: 0px;
+        margin: 0 0 10px 20px;
+      }
+
+      @include media_interval($media_tablet, $media_laptop) {
+        font-size: 16px;
+        margin: 3px 0 15px 20px;
+      }
     }
 
     &-text {
@@ -112,7 +126,12 @@ margin-right: 10px;
       @include media_interval($media_laptop, $media_laptop-big) {
         font-size: 14px;
         line-height: 16px;
-              }
+      }
+
+      @include media_interval($media_tablet, $media_laptop) {
+        font-size: 13px;
+        line-height: unset;
+      }
     }
   }
 

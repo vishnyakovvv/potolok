@@ -124,8 +124,8 @@ input::placeholder {
     }
 
     @include media_interval($media_tablet, $media_laptop) {
-      font-size: 28px;
-      line-height: 30px;
+      font-size: 26px;
+      line-height: unset;
     }
 
     @include media_interval(0, $media_tablet) {
