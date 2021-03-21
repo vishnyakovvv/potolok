@@ -1,22 +1,11 @@
-footer {
-  background-color: #ffd042;
-  height: 80px;
-  display: flex;
-  align-items: center;
+@import "../vars";
+@import "../colors";
+@import "../mixins";
 
-  span {
-    padding-right: 20px;
-  }
+.footer {
+  padding: 20px 0;
 
-  a {
-    color: #000;
-    text-decoration: none;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
+  &__wrapper {
+    display: flex;
   }
 }

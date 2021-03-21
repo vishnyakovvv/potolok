@@ -6,6 +6,10 @@
   padding: 30px 0 120px;
   position: relative;
 
+  @include media_interval(0, $media_laptop) {
+    padding: 30px 0 70px;
+  }
+
   &::before {
     background: url(/static/images/hammer.png);
     background-position: left;
@@ -28,6 +32,7 @@
 
     @include media_interval(0, $media_mobile) {
       text-align: center;
+      max-width: unset;
     }
   }
 
@@ -47,6 +52,13 @@
     @include media_interval(0, $media_mobile) {
       font-size: 20px;
       line-height: unset;
+      max-width: unset;
+    }
+  }
+
+  &__button {
+    @include media_interval(0, $media_mobile) {
+      margin: 0 auto;
     }
   }
 

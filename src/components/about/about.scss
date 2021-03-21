@@ -9,12 +9,20 @@
   position: relative;
 
   @include media_interval($media_laptop, $media_laptop-big) {
-   padding: 120px 0;
-    }
+    padding: 120px 0;
+  }
 
-    @include media_interval($media_tablet, $media_laptop) {
-padding: 50px 0;
-    }
+  @include media_interval($media_tablet, $media_laptop) {
+    padding: 46px 0;
+  }
+
+  @include media_interval($media_mobile, $media_tablet) {
+    padding: 56px 0;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    padding: 0;
+  }
 
   &::before {
     background: url(/static/images/diary.png);
@@ -37,8 +45,12 @@ padding: 50px 0;
     margin-left: 505px;
 
     @include media_interval($media_tablet, $media_laptop) {
-      margin-left: 370px;
-              }
+      margin-left: 350px;
+    }
+
+    @include media_interval(0, $media_tablet) {
+      margin-left: 0;
+    }
   }
 
   &__poster {
@@ -48,27 +60,29 @@ padding: 50px 0;
 
     @include media_interval($media_laptop, $media_laptop-big) {
       width: 530px;
-      }
+    }
 
     @include media_interval($media_tablet, $media_laptop) {
-width: 400px;
-        }
-  }
+      width: 400px;
+    }
 
-  &__strings {
-    position: absolute;
-    left: 160px;
-    opacity: 0.6;
+    @include media_interval($media_mobile, $media_tablet) {
+      width: 470px;
+      opacity: 0.2;
+    }
 
-    @include media_interval($media_tablet, $media_laptop-big) {
-      left: 0;
-      max-width: 460px;
-      }
+    @include media_interval(0, $media_mobile) {
+      display: none;
+    }
   }
 
   &__box {
     display: flex;
     flex-wrap: wrap;
+
+    @include media_interval(0, $media_mobile) {
+      text-align: center;
+    }
 
     &-inner {
       width: 320px;
@@ -76,25 +90,37 @@ width: 400px;
       margin-bottom: 36px;
 
       @include media_interval($media_laptop, $media_laptop-big) {
-width: 280px;
+        width: 280px;
       }
 
       @include media_interval($media_tablet, $media_laptop) {
-width: 250px;
+        width: 250px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        width: 100%;
       }
 
       &:nth-child(even) {
         margin-right: 18px;
 
         @include media_interval($media_laptop, $media_laptop-big) {
-margin-right: 10px;
-                }
+          margin-right: 10px;
+        }
+
+        @include media_interval(0, $media_tablet) {
+          margin-right: 0;
+        }
       }
     }
 
     &-svg {
       position: absolute;
       top: 2px;
+
+      @include media_interval(0, $media_mobile) {
+        display: none;
+      }
     }
 
     &-title {
@@ -113,6 +139,10 @@ margin-right: 10px;
       @include media_interval($media_tablet, $media_laptop) {
         font-size: 16px;
         margin: 3px 0 15px 20px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        margin: 0;
       }
     }
 
@@ -137,5 +167,15 @@ margin-right: 10px;
 
   &__title {
     margin-bottom: 39px;
+
+    @include media_interval(0, $media_mobile) {
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__button {
+    @include media_interval(0, $media_mobile) {
+      margin: 0 auto;
+    }
   }
 }

@@ -32,6 +32,14 @@
   &__tabs {
     margin: 0 auto 63px;
 
+    @include media_interval($media_tablet, $media_laptop) {
+      margin: 0 auto 40px;
+    }
+
+    @include media_interval(0, $media_tablet) {
+      margin: 0 auto 15px;
+    }
+
     &-items {
       display: flex;
       flex-wrap: wrap;
@@ -50,30 +58,32 @@
       background-image: none;
       margin: 0 4px;
 
+      @include media_interval($media_tablet, $media_laptop) {
+        width: 140px;
+        height: 38px;
+      }
+
       &:active,
       &:hover {
         color: $c_black-3;
-        width: 161px;
-        height: 43px;
         background-image: url(/static/images/grey_spot.png);
+        background-size: contain;
         background-repeat: no-repeat;
       }
 
       &:focus {
         color: $c_black-3;
         background-image: url(/static/images/yellow_spot.png);
+        background-size: contain;
         background-repeat: no-repeat;
-        width: 161px;
-        height: 43px;
       }
     }
 
     &-item.active {
       color: $c_black-3;
       background-image: url(/static/images/yellow_spot.png);
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 161px;
-      height: 43px;
       transition: $tr_duration $tr_easing;
     }
   }
@@ -98,6 +108,10 @@
 
     &-box {
       display: flex;
+
+      @include media_interval(0, $media_tablet) {
+        flex-direction: column;
+      }
     }
 
     &-title {
@@ -106,6 +120,10 @@
       font-size: 22px;
       color: $c_black-3;
       margin: 0 0 21px;
+
+      @include media_interval(0, $media_laptop) {
+        margin: 0 0 10px;
+      }
     }
 
     &-text {
@@ -116,15 +134,36 @@
       color: $c_gray--light-2;
       margin: 10px 0;
       max-width: 360px;
+
+      @include media_interval(0, $media_tablet) {
+        max-width: 100%;
+      }
     }
 
     &-img {
       margin-right: 61px;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        width: 60%;
+        margin-right: 30px;
+      }
+
+      @include media_interval(0, $media_tablet) {
+        width: 100%;
+      }
     }
 
     &-inner {
       position: relative;
       padding: 36px 0;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        padding: 0;
+      }
+
+      @include media_interval(0, $media_tablet) {
+        padding: 15px 0;
+      }
     }
 
     &-price {
@@ -136,6 +175,14 @@
       font-size: 22px;
       line-height: 25px;
       z-index: 1;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        bottom: 70px;
+      }
+
+      @include media_interval(0, $media_tablet) {
+        position: unset;
+      }
     }
 
     &-info {
@@ -145,6 +192,15 @@
       position: absolute;
       left: 740px;
       bottom: 57px;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        left: 572px;
+        bottom: 0;
+      }
+
+      @include media_interval(0, $media_tablet) {
+        position: unset;
+      }
 
       &--TOP {
         display: flex;
@@ -167,6 +223,10 @@
       margin-bottom: 47px;
       animation: fadeEffect 0.5s;
 
+      @include media_interval(0, $media_tablet) {
+        display: none;
+      }
+
       &--TEXT {
         font-style: normal;
         font-weight: 500;
@@ -175,6 +235,10 @@
         margin-right: 25px;
       }
     }
+
+    // &-button {
+    //   margin: 0 auto;
+    // }
   }
 }
 @keyframes fadeEffect {
