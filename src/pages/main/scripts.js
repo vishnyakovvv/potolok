@@ -1,24 +1,3 @@
-//   calc
-
-(function calcCeil() {
-    var colors = document.getElementById('#colors').value;
-    var space = document.getElementById('#space').value;
-    var angle = document.getElementById('#angle').value;
-    var hole = document.getElementById('#hole').value;
-    var lamp = document.getElementById('#lamp').value;
-    var ceilost = colors * space + angle * 100 + hole * 100 + lamp * 500
-    document.getElementById('#result') = ceilost
-
-
-  })();
-
-  console.log(colors);
-  console.log(space);
-  console.log(angle);
-  console.log(hole);
-  console.log(lamp);
-  console.log(ceilost);
-
 // burger menu
 
 (function burgerOpen () {
@@ -40,7 +19,7 @@
 
 
 
-// // open tabs
+// open tabs
 
 (function tabs () {
     let jsTriggers = document.querySelectorAll('.js-tab-trigger');
@@ -61,7 +40,7 @@
      });
    })();
 
-
+// slider
 
 (function slider () {
 
@@ -70,9 +49,7 @@
     var flktyA = new Flickity('.carousel-main');
     var flktyB = new Flickity( '.carousel-nav', {
       asNavFor: '.carousel-main'
-
     });
-    
 })();
 
 
