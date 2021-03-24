@@ -1,5 +1,45 @@
 <section class="calc">
-    <div class="cintainer">
-        <div class="calc__wrapper"></div>
+    <div class="container">
+        <div class="calc__wrapper">
+            <h2 class="calc__title title-block_two">Какая будет стоимость потолка?</h2>
+            <div class="calc__inner">
+                <form class="calc__form" action="">
+                    <fieldset class="calc__params">
+                        <legend class="calc__name">Длина, м</legend>
+                        <input class="calc__item" type="number" min="1" placeholder="введите число">
+                    </fieldset>
+                    <fieldset class="calc__params">
+                        <legend class="calc__name">Ширина, м</legend>
+                        <input class="calc__item" type="number" placeholder="введите число">
+                    </fieldset>
+                    <fieldset class="calc__params">
+                        <legend class="calc__name">Выберите материал</legend>
+                        <select class="calc__item" name="select">
+                            <option selected>Выберите пункт...</option>
+                            <option value="сатин">Сатиновый</option>
+                            <option value="глянец">Глянцевый</option>
+                            <option value="матовый">Матовый</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="calc__params">
+                        <legend class="calc__name">Вставка маскеровочная</legend>
+                        <select class="calc__item" name="select">
+                            <option class="calc__item-value" selected>Выберите пункт...</option>
+                            <option class="calc__item-value" value="белый">Белая</option>
+                            <option class="calc__item-value" value="цветной">Цветная</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="calc__params">
+                        <legend class="calc__name">Количество люстр</legend>
+                        <input class="calc__item" type="number" placeholder="введите число">
+                    </fieldset>
+                    <fieldset class="calc__params">
+                        <legend class="calc__name">Количество светильников</legend>
+                        <input class="calc__item" type="number" placeholder="введите число">
+                    </fieldset>
+                    <button>отправить</button>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
