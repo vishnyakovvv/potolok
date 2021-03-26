@@ -3,9 +3,35 @@
 @import "../mixins";
 
 .footer {
-  padding: 20px 0;
+  padding: 40px 0;
+
+  &__title {
+    margin-bottom: 15px;
+  }
 
   &__wrapper {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__navigation {
+
+    &-inner {
+      display: flex;
+    }
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-link {
+      color: $c_black;
+    }
+
+    &-left {
+      margin-right: 30px;
+    }
   }
 }
