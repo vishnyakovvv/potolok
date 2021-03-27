@@ -4,10 +4,7 @@
 
 .footer {
   padding: 40px 0;
-
-  &__title {
-    margin-bottom: 15px;
-  }
+  background-color: $c_white-3;
 
   &__wrapper {
     display: flex;
@@ -15,8 +12,23 @@
     justify-content: space-between;
   }
 
-  &__navigation {
+  &__logo {
+    margin-bottom: 20px;
+  }
 
+  &__title {
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__phone {
+    margin: 10px 0;
+  }
+
+  &__navigation {
     &-inner {
       display: flex;
     }
@@ -32,6 +44,10 @@
 
     &-left {
       margin-right: 30px;
+    }
+
+    &-center {
+      margin: 10px 0;
     }
   }
 }
