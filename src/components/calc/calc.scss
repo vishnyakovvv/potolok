@@ -9,6 +9,14 @@
   background-position: center;
   background-repeat: no-repeat;
 
+  @include media_interval($media_laptop, $media_laptop-big) {
+    padding: 50px 0;
+  }
+
+  @include media_interval($media_tablet, $media_laptop) {
+    padding: 30px 0;
+  }
+
   &__wrapper {
     width: 45%;
   }
@@ -34,6 +42,16 @@
     width: 220px;
     margin: 0 45px 20px 0;
 
+    @include media_interval($media_laptop, $media_laptop-big) {
+      margin: 0 20px 20px 0;
+      width: 190px;
+    }
+
+    @include media_interval($media_tablet, $media_laptop) {
+      margin: 0 0 20px 0;
+      width: 190px;
+    }
+
     &:nth-child(even) {
       margin: 0 0 20px 0;
     }
@@ -45,6 +63,10 @@
     font-size: 15px;
     color: $c_white;
     margin-bottom: 13px;
+
+    @include media_interval($media_tablet, $media_laptop-big) {
+      font-size: 14px;
+    }
   }
 
   &__item {
