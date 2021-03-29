@@ -10,7 +10,6 @@
   }
 
   &__wrapper {
-    position: relative;
     display: flex;
     align-items: center;
 
@@ -88,56 +87,8 @@
   }
 
   &__menu {
-    display: block;
     position: absolute;
+    top: 0;
     right: 0;
-    width: 55px;
-    height: 33px;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: $tr_duration $tr_easing;
-
-    @include media_interval(0, $media_mobile) {
-      top: 10px;
-    }
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  &__stick,
-  &__stick::before,
-  &__stick::after {
-    width: 55px;
-    height: 5px;
-    border-radius: 5px;
-    background: $c_gray--dark;
-    top: 50%;
-    position: absolute;
-    transition: all 0.6s;
-  }
-
-  &__stick::before {
-    content: "";
-    top: -12px;
-    left: 0;
-  }
-
-  &__stick::after {
-    content: "";
-    top: 12px;
-    left: 0;
-  }
-
-  &__stick.open {
-    transform: translateX(-50px);
-    background: transparent;
-    &::after {
-      transform: rotate(-45deg) translate(50px, 33px);
-    }
-    &::before {
-      transform: rotate(45deg) translate(50px, -33px);
-    }
   }
 }

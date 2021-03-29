@@ -68,6 +68,10 @@ input::placeholder {
   }
 }
 
+span {
+  display: inline-block;
+}
+
 .container {
   min-height: 100%;
   max-width: 1180px;
@@ -202,4 +206,5 @@ h3 {
 .yellow-bold {
   font-weight: 700;
   color: $c_yellow;
+  z-index: -1;
 }

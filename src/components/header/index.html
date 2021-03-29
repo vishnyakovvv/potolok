@@ -1,14 +1,14 @@
 <header class="header">
   <div class="container">
     <div class="header__wrapper">
-      <img class="header__logo" src="/static/images/logo.svg" alt="логотип фирмы 33 квадрата">
+      <img class="header__logo" src="static/images/logo.svg" alt="логотип фирмы 33 квадрата">
       <div class="header__contacts">
         <a href="tel:+79640000000" class="header__phone">+7 964 971 98 76</a>
         <span class="header__city">г. Тольятти</span>
       </div>
-      <button class="header__menu burger_js">
-        <span class="header__stick stick_js"></span>
-      </button>
+      <div class="header__menu">
+        @@include('menu/index.html')
+      </div>
     </div>
   </div>
 </header>
