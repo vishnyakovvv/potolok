@@ -74,7 +74,7 @@ let menuBtn = document.querySelector('.menu-btn'),
     link = document.querySelector('.nav .nav-links');
     
 menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('.nav-open');
+    // nav.classList.toggle('.nav-open');
     lineOne.classList.toggle('line-cross');
     lineTwo.classList.toggle('line-fade-out');
     lineThree.classList.toggle('line-cross');
