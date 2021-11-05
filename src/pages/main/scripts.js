@@ -66,20 +66,27 @@
 
 // menu
 
-let menuBtn = document.querySelector('.menu-btn'),
-    nav = document.querySelector('.nav'),
-    lineOne = document.querySelector('.nav .menu-btn .line--1'),
-    lineTwo = document.querySelector('.nav .menu-btn .line--2'),
-    lineThree = document.querySelector('.nav .menu-btn .line--3'),
-    link = document.querySelector('.nav .nav-links');
+// let menuBtn = document.querySelector('.menu-btn'),
+//     nav = document.querySelector('.nav'),
+//     lineOne = document.querySelector('.nav .menu-btn .line--1'),
+//     lineTwo = document.querySelector('.nav .menu-btn .line--2'),
+//     lineThree = document.querySelector('.nav .menu-btn .line--3'),
+//     link = document.querySelector('.nav .nav-links');
     
-menuBtn.addEventListener('click', () => {
-    // nav.classList.toggle('.nav-open');
-    lineOne.classList.toggle('line-cross');
-    lineTwo.classList.toggle('line-fade-out');
-    lineThree.classList.toggle('line-cross');
-    link.classList.toggle('fade-in');
-})
+//     menuBtn.addEventListener('click', () => {
+//     nav.classList.toggle('.nav-open');
+//     lineOne.classList.toggle('line-cross');
+//     lineTwo.classList.toggle('line-fade-out');
+//     lineThree.classList.toggle('line-cross');
+//     link.classList.toggle('fade-in');
+// })
+
+var trigger = document.getElementById('toggle');
+var box = document.getElementById('menu');
+
+toggle.addEventListener('click', function() {
+  box.classList.toggle('active');
+});
 
 // slider
 
@@ -92,6 +99,18 @@ menuBtn.addEventListener('click', () => {
       asNavFor: '.carousel-main'
     });
 })();
+
+// culc
+
+function calcCeil() {
+    let culcColors = document.getElementById('colors').value;
+    let culcSpace = document.getElementById('space').value;
+    let culcAngle = document.getElementById('angle').value;
+    let culcHole = document.getElementById('hole').value;
+    let culcLamp = document.getElementById('lamp').value;
+    let culcCeilost = culcColors * culcSpace + culcAngle * 100 + culcHole * 100 + culcLamp * 500
+    document.getElementById('result').innerHTML = culcCeilost
+  }
 
 
 

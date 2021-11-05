@@ -62,7 +62,6 @@
     font-weight: 500;
     font-size: 15px;
     color: $c_white;
-    margin-bottom: 13px;
 
     @include media_interval($media_tablet, $media_laptop-big) {
       font-size: 14px;
@@ -100,21 +99,22 @@
 
   &__price {
     display: flex;
+    flex-direction: column;
     font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 14px;
     line-height: 17px;
     color: $c_white;
-    margin: 19px 0 25px;
+    margin: 19px 60px 25px 0;
 
     &-offer {
-      width: 150px;
-      margin-right: 127px;
+      width: auto;
+      margin-bottom: 15px;
     }
 
     &-total {
       font-weight: 700;
-      font-size: 19px;
+      font-size: 30px;
     }
   }
 }

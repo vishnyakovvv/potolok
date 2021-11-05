@@ -5,11 +5,11 @@
 .catalog {
   overflow: hidden;
   position: relative;
-  padding: 60px 0 80px;
+  padding: 0 0 70px;
 
   &__title {
     text-align: center;
-    margin-bottom: 33px;
+    margin-bottom: 10px;
   }
 
   &__cost-wrapper {
@@ -30,7 +30,7 @@
   }
 
   &__tabs {
-    margin: 0 auto 63px;
+    margin: 0 auto 30px;
 
     @include media_interval($media_tablet, $media_laptop) {
       margin: 0 auto 40px;
